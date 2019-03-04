@@ -25,7 +25,6 @@ nav a {
     text-decoration: none;
     color: black; }
 nav a:hover {color: blue; }
-nav a:link {color: green; }
 nav ul {
     list-style-type: none;
     margin: 0;
