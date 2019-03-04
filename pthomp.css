@@ -32,3 +32,11 @@ nav ul {
     padding-left: 0;
     font-size: 1.2em; 
 }
+#roundResult {
+    white-space: pre;
+}
+#images img {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
