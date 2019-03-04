@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Paul Thompson -->
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <style>
+    #roundResult {
+        white-space: pre;
+        text-align: center;
+    }
+    #images img {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #images {
+        text-align: center;
+    }
+    
+    
+    </style>
+
+</head>
+	
+<body>
+    <h1>It's you vs Gary Oak! Choose your Pokemon</h1>
+    <div id="images"></div>
+    <button id='fire'><img src="charmander.jpg"></button>
+    <button id='grass'><img src="bulbasaur.jpg"></button>
+    <button id='water'><img src="squirtle.jpg"></button>
+    </div>
+    <div id='results'>
+        <h2 id='roundResult'></h2>
+        <h2>Player Score: <span id='showPlayerScore'>0</span> </h2>
+        <h2>Gary's Score: <span  id='showComputerScore'>0</span></h2>
+        <h2 id='winner'></h2>
+    </div>
+    
+    
+
+    <script>
+
+        function computerPlay () {
+            let choice = Math.floor(Math.random() * 3);
+            let cthrow;
+            if (choice == 0) {
+                cthrow = 'fire';
+            }
+            if (choice == 1) {
+                cthrow = 'grass';
+            }
+            if (choice == 2) {
+                cthrow = 'water';
+            }
+            return cthrow;
+        } 
+        
+        let userScore = 0;
+        let compScore = 0;
+        let winner = document.querySelector('#winner');
+        
+        function checkWinner(pcompScore, puserScore) {
+            if (pcompScore == 5) {
+                winner.textContent = 'Gary is the first to 5 points and wins!';
+                compScore = 0;
+                userScore = 0;
+                showComputerScore.textContent = compScore;
+                showPlayerScore.textContent = userScore;
+            }
+            if (puserScore == 5) {
+                winner.textContent = 'You are the first to 5 points and the winner!';
+                compScore = 0;
+                userScore = 0;
+                showPlayerScore.textContent = userScore;
+                showComputerScore.textContent = compScore;
+            }
+            if (puserScore == 1 && pcompScore == 0 || pcompScore == 1 && puserScore == 0) {
+                winner.textContent = '';
+            }
+        }
+
+        function playRound (computerSelection, playerSelection) {
+            let roundResult = document.querySelector('#roundResult');
+            let showPlayerScore = document.querySelector('#showPlayerScore')
+            let showComputerScore = document.querySelector('#showComputerScore')
+            
+            if (computerSelection == 'fire' && playerSelection == 'grass') {
+                roundResult.textContent = 'Gary chose charmander\r\nGary wins';
+                compScore += 1;
+                showComputerScore.textContent = compScore;
+                checkWinner(compScore, userScore);
+            }
+            else if (computerSelection == 'fire' && playerSelection == 'water') {
+                roundResult.textContent = 'Gary chose charmander\r\nYou win';    
+                userScore += 1;
+                showPlayerScore.textContent = userScore;
+                checkWinner(compScore, userScore);
+            }
+            else if (computerSelection == 'grass' && playerSelection == 'fire') {
+                roundResult.textContent = 'Gary chose Bulbasaur\r\nYou win';
+                userScore += 1;
+                showPlayerScore.textContent = userScore;
+                checkWinner(compScore, userScore);
+            }
+            else if (computerSelection == 'grass' && playerSelection == 'water') {
+                roundResult.textContent = 'Gary chose Bulbasaur\r\nGary wins';
+                compScore += 1;
+                showComputerScore.textContent = compScore;
+                checkWinner(compScore, userScore);
+            }
+            else if (computerSelection == 'water' && playerSelection == 'fire') {
+                roundResult.textContent = 'Gary chose Squirtle\r\nGary wins';
+                compScore += 1;
+                showComputerScore.textContent = compScore;
+                checkWinner(compScore, userScore);
+            }
+            else if (computerSelection == 'water' && playerSelection == 'grass') {
+                roundResult.textContent = 'Gary chose Squirtle\r\nYou win';
+                userScore += 1;
+                showPlayerScore.textContent = userScore;
+                checkWinner(compScore, userScore);
+            }
+            else if (computerSelection == 'water' && playerSelection == 'water') {
+                roundResult.textContent = 'Gary chose Squirtle also\r\nDraw'
+            }
+            else if (computerSelection == 'fire' && playerSelection == 'fire') {
+                roundResult.textContent = 'Gary chose Charmander also\r\nDraw'
+            }
+            else if (computerSelection == 'grass' && playerSelection == 'grass') {
+                roundResult.textContent = 'Gary chose Bulbasaur also\r\nDraw'
+            }
+            else {
+                roundResult.textContent = 'You chose the same as the Gary\r\nDraw';
+            }
+        }
+                      
+        const fire = document.getElementById('fire');
+        fire.addEventListener('click', function() {
+            playRound(computerPlay(), 'fire')});
+
+        const grass = document.getElementById('grass');
+        grass.addEventListener('click', function() { 
+            playRound(computerPlay(), 'grass')});
+
+        const water = document.getElementById('water');
+        water.addEventListener('click', function() {
+            playRound(computerPlay(), 'water')});
+        
+        
+
+               
+        </script> 
+</body>
+</html>
