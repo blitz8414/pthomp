@@ -18,6 +18,7 @@ nav {
     float: left;
     font-weight: bold;    
     margin-top: 0px;
+    margin-right: 20px;
     padding: 20px;
     padding-bottom: 90%;
 }
@@ -38,4 +39,28 @@ nav ul {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+}
+#info {
+    text-align: center;
+    font-style: italic;
+}
+
+#college {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    text-align: center;
+    font-size: 2em;
+}
+h3{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.ul2 {
+    margin-left: 170px;
 }
