@@ -55,14 +55,15 @@
             
             function checkWinner(pcompScore, puserScore) {
                 if (pcompScore == 5) {
-                    winner.textContent = 'Gary is the first to 5 points and wins!';
+                    winner.textContent = 'Gary is the first to 5 points and wins!\r\nYou scored ' + puserScore + ' and Gary scored ' + pcompScore;
+
                     compScore = 0;
                     userScore = 0;
                     showComputerScore.textContent = compScore;
                     showPlayerScore.textContent = userScore;
                 }
                 if (puserScore == 5) {
-                    winner.textContent = 'You are the first to 5 points and the winner!';
+                    winner.textContent = 'You are the first to 5 points and the winner!\r\nYou scored ' + puserScore + ' and Gary scored ' + pcompScore;
                     compScore = 0;
                     userScore = 0;
                     showPlayerScore.textContent = userScore;

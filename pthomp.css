@@ -35,6 +35,9 @@ nav ul {
 #roundResult {
     white-space: pre;
 }
+#winner {
+    white-space: pre;
+}
 #images img {
     display: inline-block;
     margin-left: auto;
