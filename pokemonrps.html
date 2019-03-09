@@ -79,49 +79,49 @@
                 let showComputerScore = document.querySelector('#showComputerScore')
                 
                 if (computerSelection == 'fire' && playerSelection == 'grass') {
-                    roundResult.textContent = 'Gary chose charmander\r\nGary wins';
+                    roundResult.textContent = 'You chose Bulbasaur\r\nGary chose charmander\r\nGary wins';
                     compScore += 1;
                     showComputerScore.textContent = compScore;
                     checkWinner(compScore, userScore);
                 }
                 else if (computerSelection == 'fire' && playerSelection == 'water') {
-                    roundResult.textContent = 'Gary chose charmander\r\nYou win';    
+                    roundResult.textContent = 'You chose Squirtle\r\nGary chose charmander\r\nYou win';    
                     userScore += 1;
                     showPlayerScore.textContent = userScore;
                     checkWinner(compScore, userScore);
                 }
                 else if (computerSelection == 'grass' && playerSelection == 'fire') {
-                    roundResult.textContent = 'Gary chose Bulbasaur\r\nYou win';
+                    roundResult.textContent = 'You chose Charmander\r\nGary chose Bulbasaur\r\nYou win';
                     userScore += 1;
                     showPlayerScore.textContent = userScore;
                     checkWinner(compScore, userScore);
                 }
                 else if (computerSelection == 'grass' && playerSelection == 'water') {
-                    roundResult.textContent = 'Gary chose Bulbasaur\r\nGary wins';
+                    roundResult.textContent = 'You chose Squirtle\r\nGary chose Bulbasaur\r\nGary wins';
                     compScore += 1;
                     showComputerScore.textContent = compScore;
                     checkWinner(compScore, userScore);
                 }
                 else if (computerSelection == 'water' && playerSelection == 'fire') {
-                    roundResult.textContent = 'Gary chose Squirtle\r\nGary wins';
+                    roundResult.textContent = 'You chose Charmander\r\nGary chose Squirtle\r\nGary wins';
                     compScore += 1;
                     showComputerScore.textContent = compScore;
                     checkWinner(compScore, userScore);
                 }
                 else if (computerSelection == 'water' && playerSelection == 'grass') {
-                    roundResult.textContent = 'Gary chose Squirtle\r\nYou win';
+                    roundResult.textContent = 'You chose Bulbasaur\r\nGary chose Squirtle\r\nYou win';
                     userScore += 1;
                     showPlayerScore.textContent = userScore;
                     checkWinner(compScore, userScore);
                 }
                 else if (computerSelection == 'water' && playerSelection == 'water') {
-                    roundResult.textContent = 'Gary chose Squirtle also\r\nDraw'
+                    roundResult.textContent = 'You and Gary both chose Squirtle\r\nDraw'
                 }
                 else if (computerSelection == 'fire' && playerSelection == 'fire') {
-                    roundResult.textContent = 'Gary chose Charmander also\r\nDraw'
+                    roundResult.textContent = 'You and Gary both chose Charmander\r\nDraw'
                 }
                 else if (computerSelection == 'grass' && playerSelection == 'grass') {
-                    roundResult.textContent = 'Gary chose Bulbasaur also\r\nDraw'
+                    roundResult.textContent = 'You and Gary both chose Bulbasaur\r\nDraw'
                 }
                 else {
                     roundResult.textContent = 'You chose the same as the Gary\r\nDraw';
