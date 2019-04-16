@@ -1,4 +1,7 @@
-body {background-color: white; }
+body {
+    background-color: white;
+    min-width: 600px;
+}
 figure {
     display: block;
     text-align: center;
@@ -11,6 +14,16 @@ h1 {
     margin-bottom: 0px;
     padding-bottom: 20px;
     text-align: center;
+}
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 nav {    
     background-color: cyan;
@@ -32,38 +45,29 @@ nav ul {
     padding-left: 0;
     font-size: 1.2em; 
 }
-#roundResult {
-    white-space: pre;
-}
-#winner {
-    white-space: pre;
-}
-#images img {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-}
-#info {
-    text-align: center;
-    font-style: italic;
-}
-
 #college {
     font-weight: bold;
     font-size: 1.1em;
     margin: 0;
     padding: 0;
 }
-h2 {
+#images {
     text-align: center;
-    font-size: 1.5em;
 }
-h3{
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+#info {
+    text-align: center;
+    font-style: italic;
 }
+#roundResult {
+    white-space: pre;
+}
+#winner {
+    white-space: pre;
+}
+.image {
+    display: inline-block;
+}
+
 .right {
     float: right;
 }

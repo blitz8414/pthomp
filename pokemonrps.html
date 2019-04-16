@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="pthomp.css">
 </head>
 <body>    
-        <h1>Paul Thompson</h1> <nav>
+        <h1>Paul Thompson</h1> 
+        <nav>
         <ul>
             <a href="index.html"><li>Home</li></a>
             <a href="resume.html"><li>Resume</li></a>
@@ -17,16 +18,16 @@
 
     <main>   
             <h2>It's you vs Gary Oak! Choose your Pokemon</h2>
-            <div id="images"></div>
-            <button id='fire'><img src="charmander.jpg"></button>
-            <button id='grass'><img src="bulbasaur.jpg"></button>
-            <button id='water'><img src="squirtle.jpg"></button>
+            <div id='images'>
+            <button id='fire'><img src="charmander.jpg" width=175px class="image"></button>
+            <button id='grass'><img src="bulbasaur.jpg" width=175px class="image"></button>
+            <button id='water'><img src="squirtle.jpg" width=175px class="image"></button>
             </div>
             <div id='results'>
                 <h2 id='roundResult'></h2>
                 <h2>Player Score: <span id='showPlayerScore'>0</span> </h2>
                 <h2>Gary's Score: <span  id='showComputerScore'>0</span></h2>
-                <h2 id='winner'></h2>
+                <h2 id='winner'></h2> 
             </div>
             <p>Fire beats grass<br>
             Grass beats water<br>
@@ -80,13 +81,13 @@
                 let showComputerScore = document.querySelector('#showComputerScore')
                 
                 if (computerSelection == 'fire' && playerSelection == 'grass') {
-                    roundResult.textContent = 'You chose Bulbasaur\r\nGary chose charmander\r\nGary wins';
+                    roundResult.textContent = 'You chose Bulbasaur\r\nGary chose Charmander\r\nGary wins';
                     compScore += 1;
                     showComputerScore.textContent = compScore;
                     checkWinner(compScore, userScore);
                 }
                 else if (computerSelection == 'fire' && playerSelection == 'water') {
-                    roundResult.textContent = 'You chose Squirtle\r\nGary chose charmander\r\nYou win';    
+                    roundResult.textContent = 'You chose Squirtle\r\nGary chose Charmander\r\nYou win';    
                     userScore += 1;
                     showPlayerScore.textContent = userScore;
                     checkWinner(compScore, userScore);
